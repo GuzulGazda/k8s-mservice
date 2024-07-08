@@ -1,0 +1,68 @@
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs
+*.log
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+# Eclipse
+.project
+.classpath
+.cxxlaunch
+.settings/
+.metadata/
+bin/
+tmp/
+
+# NetBeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nball/
+.nb-gradle/
+
+# VS Code
+.vscode/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Other
+!.gitignore
+
+# Multimodule specific
+**/target/
+**/*.log
+**/*.class
+**/*.jar
+**/*.war
+**/*.ear
+
+# MacOS specific
+*.DS_Store
+
+# Windows specific
+ehthumbs.db
+
