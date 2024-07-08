@@ -9,7 +9,9 @@ on:
     paths:
       - "bookmarker-api/**"
     types:
-      - [opened, synchronize, reopened]
+      - opened
+      - synchronize
+      - reopened
 
 jobs:
   build-bookmarker-api:
