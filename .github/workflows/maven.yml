@@ -2,12 +2,12 @@ name: Build
 
 on:
   push:
-    paths:
-      - "bookmarker-api/**"
+#    paths:
+#      - "bookmarker-api/**"
     branches: [ "master" ]
   pull_request:
-    paths:
-      - "bookmarker-api/**"
+#    paths:
+#      - "bookmarker-api/**"
     types:
       - opened
       - synchronize
