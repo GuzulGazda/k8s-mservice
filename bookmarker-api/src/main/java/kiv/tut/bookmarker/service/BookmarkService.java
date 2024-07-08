@@ -3,6 +3,7 @@ package kiv.tut.bookmarker.service;
 import kiv.tut.bookmarker.domain.Bookmark;
 import kiv.tut.bookmarker.dto.BookmarkDto;
 import kiv.tut.bookmarker.dto.BookmarksDto;
+import kiv.tut.bookmarker.dto.CreateBookmarkRequest;
 import kiv.tut.bookmarker.exception.BookmarkNotFoundException;
 import kiv.tut.bookmarker.repository.BookmarkRepository;
 import lombok.RequiredArgsConstructor;
@@ -11,6 +12,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.time.Instant;
 
 import static java.lang.String.format;
 
@@ -44,5 +47,15 @@ public class BookmarkService {
         PageRequest pageable = PageRequest.of(pageNo, 10, Sort.Direction.DESC, "createdAt");
         Page<BookmarkDto> bookmarkDtoPage = repository.searchBookmars(pageable, query);
         return new BookmarksDto(bookmarkDtoPage);
+    }
+
+    public Long createBookmark(CreateBookmarkRequest request) {
+        return repository.save(
+                Bookmark.builder()
+                        .title(request.title())
+                        .url(request.url())
+                        .createdAt(Instant.now())
+                        .build()
+        ).getId();
     }
 }

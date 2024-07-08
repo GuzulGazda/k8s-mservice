@@ -7,10 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.SequenceGenerator;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 import lombok.extern.slf4j.Slf4j;
 
 import java.time.Instant;
@@ -22,6 +19,7 @@ import java.time.Instant;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class Bookmark {
     @Id
     @SequenceGenerator(name = "bm_id_seq_gen", sequenceName = "bm_id_seq")
@@ -32,5 +30,4 @@ public class Bookmark {
     @Column(nullable = false)
     private String url;
     private Instant createdAt;
-
 }

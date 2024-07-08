@@ -6,11 +6,13 @@ import kiv.tut.bookmarker.repository.BookmarkRepository;
 import lombok.SneakyThrows;
 import org.hamcrest.CoreMatchers;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.http.MediaType;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.web.servlet.MockMvc;
 
@@ -18,9 +20,15 @@ import java.time.Instant;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.hamcrest.Matchers.hasSize;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.Matchers.notNullValue;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.header;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
+
 
 @SuppressWarnings("unused")
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -60,6 +68,36 @@ class BookmarkControllerTest {
                 .andExpect(jsonPath("$.isLast", CoreMatchers.equalTo(isLast)))
                 .andExpect(jsonPath("$.hasNext", CoreMatchers.equalTo(hasNext)))
                 .andExpect(jsonPath("$.hasPrevious", CoreMatchers.equalTo(hasPrevious)));
+    }
+
+    @Test
+    void shouldCreateBookmarkSuccessfully() throws Exception {
+        this.mockMvc.perform(
+                        post("/api/v1/bookmarks")
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content("""
+            {
+                "title": "SivaLabs Blog",
+                "url": "https://sivalabs.in"
+            }
+            """)
+                )
+                .andExpect(status().isCreated());
+    }
+
+    @Test
+    void shouldFailToCreateBookmarkWhenUrlIsNotPresent() throws Exception {
+        this.mockMvc.perform(
+                        post("/api/v1/bookmarks")
+                                .contentType(MediaType.APPLICATION_JSON)
+                                .content("""
+                {
+                    "title": "SivaLabs Blog"
+                }
+                """)
+                )
+                .andExpect(status().isBadRequest())
+                .andReturn();
     }
 
     private void fillBookmarkList() {
