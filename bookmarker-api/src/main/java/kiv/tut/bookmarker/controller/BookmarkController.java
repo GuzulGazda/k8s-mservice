@@ -22,12 +22,12 @@ public class BookmarkController {
 
     @GetMapping
     public ResponseEntity<BookmarksDto> findAll(
-            @RequestParam(
-                    value = "page",
-                    required = false,
-                    defaultValue = "0") Integer page
-    ) {
-        return ResponseEntity.ok(service.findAll(page));
+            @RequestParam(name = "page", defaultValue = "0") Integer page,
+            @RequestParam(name = "query", defaultValue = "") String query ) {
+        if(query == null || query.isEmpty()){
+            return ResponseEntity.ok(service.findAll(page));
+        }
+        return ResponseEntity.ok(service.searchBookmarks(page, query));
     }
 
     @GetMapping("/{bookmark-id}")

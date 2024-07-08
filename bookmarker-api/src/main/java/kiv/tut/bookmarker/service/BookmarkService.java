@@ -38,4 +38,11 @@ public class BookmarkService {
                         format(NO_BOOKMARK_EXISTS_WITH_THE_PROVIDED_ID_D, bookmarkId)
                 ));
     }
+    @Transactional(readOnly = true)
+    public BookmarksDto searchBookmarks(Integer page, String query) {
+        int pageNo = page < 1 ? 0 : page - 1;
+        PageRequest pageable = PageRequest.of(pageNo, 10, Sort.Direction.DESC, "createdAt");
+        Page<BookmarkDto> bookmarkDtoPage = repository.searchBookmars(pageable, query);
+        return new BookmarksDto(bookmarkDtoPage);
+    }
 }
