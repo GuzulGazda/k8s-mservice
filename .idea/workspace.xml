@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e078481-34b9-48dc-a5a8-bba3b7e27c7d" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/build-api.yml" beforeDir="false" />
-    </list>
+    <list default="true" id="5e078481-34b9-48dc-a5a8-bba3b7e27c7d" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,9 +13,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 7
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 7
+}</component>
   <component name="ProjectId" id="2ivLBdQsfZM6TfoOtwOucApaNT5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -34,6 +32,9 @@
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;jbr-17&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/projects/k8s-mservice/bookmarker-api/src&quot;,
     &quot;onboarding.tips.debug.path&quot;: &quot;D:/projects/k8s-mservice/bookmarker-api/src/main/java/org/example/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
