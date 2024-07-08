@@ -5,36 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e078481-34b9-48dc-a5a8-bba3b7e27c7d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/src/main/java/kiv/tut/bookmarker/BookmarkerApiApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/src/main/java/kiv/tut/bookmarker/controller/BookmarkController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/src/main/java/kiv/tut/bookmarker/domain/Bookmark.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/src/main/java/kiv/tut/bookmarker/dto/BookmarkDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/src/main/java/kiv/tut/bookmarker/dto/BookmarksDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/src/main/java/kiv/tut/bookmarker/exception/BookmarkNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/src/main/java/kiv/tut/bookmarker/exception/handler/ErrorResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/src/main/java/kiv/tut/bookmarker/exception/handler/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/src/main/java/kiv/tut/bookmarker/repository/BookmarkRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/src/main/java/kiv/tut/bookmarker/service/BookmarkService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/src/main/resources/banner.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/src/main/resources/db/migration/h2/V1__create_bookmarks_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/src/main/resources/db/migration/h2/V2__insert_sample_data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/src/main/resources/db/migration/postgresql/V1__create_bookmarks_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/src/main/resources/db/migration/postgresql/V2__insert_sample_data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/src/test/java/kiv/tut/bookmarker/BookmarkerApiApplicationTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/src/test/java/kiv/tut/bookmarker/TestBookmarkerApiApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/src/test/java/kiv/tut/bookmarker/TestcontainersConfiguration.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bookmarker-api/src/test/java/kiv/tut/bookmarker/controller/BookmarkControllerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/k8s-mservice.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.github/workflows/build-api.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
