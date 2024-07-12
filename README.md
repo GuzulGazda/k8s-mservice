@@ -12,3 +12,5 @@
 - docker pull kalynchukihor/bookmarker-api-jib:0.0.1-SNAPSHOT
 ### Run container:
 - docker run -d -p 8080:8080 kalynchukihor/bookmarker-api-jib:0.0.1-SNAPSHOT
+### Run dev environment:
+- docker-compose up

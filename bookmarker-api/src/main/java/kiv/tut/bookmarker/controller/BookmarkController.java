@@ -29,7 +29,7 @@ public class BookmarkController {
     }
 
     @GetMapping("/{bookmark-id}")
-    public ResponseEntity<Bookmark> findAll(
+    public ResponseEntity<Bookmark> findById(
             @PathVariable("bookmark-id") Long bookmarkId
     ) {
         return ResponseEntity.ok(service.findById(bookmarkId));
